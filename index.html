@@ -39,6 +39,9 @@
     </nav>
 
     <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <img src="logo-siskp.png" alt="Logo SISKP"
+            class="hero-logo w-24 h-24 mb-6 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+
         <h2
             class="hero-title text-4xl md:text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
             KONTRIBUTOR NEO SISKP
@@ -82,7 +85,11 @@
                     <span class="text-blue-500 font-mono text-sm">DIVISI 01</span>
                     <h4 class="text-xl font-bold mb-2">System Analysis</h4>
                     <p class="text-gray-400 text-sm">
-                        Divisi System Analysis bertanggung jawab dalam menganalisis kebutuhan sistem NEOSIKP secara menyeluruh. Divisi ini melakukan penggalian kebutuhan pengguna (mahasiswa, dosen, dan admin), menyusun dokumen kebutuhan sistem, serta merancang alur bisnis dan proses kerja sistem. Hasil analisis menjadi dasar utama bagi divisi lain dalam proses desain, pengembangan, dan implementasi sistem.
+                        Divisi System Analysis bertanggung jawab dalam menganalisis kebutuhan sistem NEOSIKP secara
+                        menyeluruh. Divisi ini melakukan penggalian kebutuhan pengguna (mahasiswa, dosen, dan admin),
+                        menyusun dokumen kebutuhan sistem, serta merancang alur bisnis dan proses kerja sistem. Hasil
+                        analisis menjadi dasar utama bagi divisi lain dalam proses desain, pengembangan, dan
+                        implementasi sistem.
                     </p>
                 </div>
             </div>
@@ -96,7 +103,10 @@
                     <span class="text-blue-500 font-mono text-sm">DIVISI 02</span>
                     <h4 class="text-xl font-bold mb-2">Database Management</h4>
                     <p class="text-gray-400 text-sm">
-                        Divisi Database Management berfokus pada perancangan, pengelolaan, dan optimasi basis data NEOSIKP. Divisi ini merancang struktur database, relasi antar tabel, serta memastikan keamanan, konsistensi, dan integritas data skripsi dan kerja praktik. Selain itu, divisi ini juga mendukung kebutuhan query dan integrasi data untuk mendukung performa sistem secara optimal.
+                        Divisi Database Management berfokus pada perancangan, pengelolaan, dan optimasi basis data
+                        NEOSIKP. Divisi ini merancang struktur database, relasi antar tabel, serta memastikan keamanan,
+                        konsistensi, dan integritas data skripsi dan kerja praktik. Selain itu, divisi ini juga
+                        mendukung kebutuhan query dan integrasi data untuk mendukung performa sistem secara optimal.
                     </p>
                 </div>
             </div>
@@ -110,7 +120,11 @@
                     <span class="text-blue-500 font-mono text-sm">DIVISI 03</span>
                     <h4 class="text-xl font-bold mb-2">UI/UX Design</h4>
                     <p class="text-gray-400 text-sm">
-                        Divisi UI/UX Design bertanggung jawab dalam merancang tampilan dan pengalaman pengguna NEOSIKP agar mudah digunakan, intuitif, dan efisien. Divisi ini menyusun user flow, wireframe, hingga desain antarmuka menggunakan Figma, dengan mempertimbangkan kebutuhan pengguna dan hasil analisis sistem. Tujuan utama divisi ini adalah menciptakan pengalaman pengguna yang nyaman dan profesional.
+                        Divisi UI/UX Design bertanggung jawab dalam merancang tampilan dan pengalaman pengguna NEOSIKP
+                        agar mudah digunakan, intuitif, dan efisien. Divisi ini menyusun user flow, wireframe, hingga
+                        desain antarmuka menggunakan Figma, dengan mempertimbangkan kebutuhan pengguna dan hasil
+                        analisis sistem. Tujuan utama divisi ini adalah menciptakan pengalaman pengguna yang nyaman dan
+                        profesional.
                     </p>
                 </div>
             </div>
@@ -125,7 +139,10 @@
                     <h4 class="text-xl font-bold mb-2">Software Development
                     </h4>
                     <p class="text-gray-400 text-sm">
-                        Divisi Software Development bertugas mengimplementasikan sistem NEOSIKP berdasarkan hasil analisis dan desain yang telah dibuat. Divisi ini melakukan pengembangan fitur, integrasi sistem, serta pengujian aplikasi agar berjalan sesuai kebutuhan. Selain itu, divisi ini juga memastikan kualitas kode, keamanan sistem, dan kesiapan sistem untuk digunakan secara nyata.
+                        Divisi Software Development bertugas mengimplementasikan sistem NEOSIKP berdasarkan hasil
+                        analisis dan desain yang telah dibuat. Divisi ini melakukan pengembangan fitur, integrasi
+                        sistem, serta pengujian aplikasi agar berjalan sesuai kebutuhan. Selain itu, divisi ini juga
+                        memastikan kualitas kode, keamanan sistem, dan kesiapan sistem untuk digunakan secara nyata.
                     </p>
                 </div>
             </div>
@@ -137,7 +154,6 @@
     </footer>
 
     <script>
-
         const canvas = document.getElementById('starCanvas');
         const ctx = canvas.getContext('2d');
         let stars = [];
@@ -187,6 +203,8 @@
         animateStars();
 
         // --- LOGIC SCROLL REVEAL ---
+        // Penambahan reveal untuk logo
+        ScrollReveal().reveal('.hero-logo', { delay: 100, distance: '30px', origin: 'top' });
         ScrollReveal().reveal('.hero-title', { delay: 200, distance: '50px', origin: 'top' });
         ScrollReveal().reveal('.hero-subtitle', { delay: 400, distance: '50px', origin: 'bottom' });
         ScrollReveal().reveal('.section-title', { delay: 200, distance: '30px', origin: 'left' });
