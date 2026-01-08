@@ -23,6 +23,37 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        /* --- Animasi Luar Angkasa --- */
+        @keyframes float-planet {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(10deg);
+            }
+        }
+
+        .floating-planet {
+            animation: float-planet 8s ease-in-out infinite;
+        }
+
+        .orbit-slow {
+            animation: rotate 40s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -30,33 +61,56 @@
 
     <canvas id="starCanvas"></canvas>
 
+    <div class="fixed top-20 right-10 opacity-30 pointer-events-none z-[-1]">
+        <img src="https://cdn-icons-png.flaticon.com/512/2530/2530894.png" alt="Planet" class="w-32 h-32 orbit-slow">
+    </div>
+    <div class="fixed top-1/3 left-10 opacity-20 pointer-events-none z-[-1]">
+        <img src="https://cdn-icons-png.flaticon.com/512/6063/6063380.png" alt="Earth"
+            class="w-24 h-24 floating-planet">
+    </div>
+
     <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center glass-card border-none bg-transparent">
         <h1 class="text-2xl font-bold tracking-tighter text-blue-400">PTI E Akt 2023</h1>
         <div class="space-x-8 hidden md:flex">
             <a href="#dosen" class="hover:text-blue-400 transition">Dosen</a>
             <a href="#divisi" class="hover:text-blue-400 transition">Divisi</a>
+            <a href="#testimoni" class="hover:text-blue-400 transition">Kesan Pesan</a>
         </div>
     </nav>
 
-    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-        <img src="logo-siskp.png" alt="Logo SISKP"
-            class="hero-logo w-24 h-24 mb-6 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+    <section class="min-h-screen flex flex-col justify-center items-center px-8 pt-32 pb-20 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-12 w-full">
 
-        <h2
-            class="hero-title text-4xl md:text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            KONTRIBUTOR NEO SISKP
-        </h2>
-        <p class="hero-subtitle text-gray-400 text-lg md:text-xl max-w-2xl">
-            Dokumentasi mahasiswa yang berkontribusi dalam pembuatan apliaksi neo siskp 2025 , Jurusan Teknik
-            Informatika, Universitas Negeri Gorontalo.
-        </p>
+            <div class="reveal-card w-full md:w-1/2 flex justify-center relative">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124119.png" alt="Small Planet"
+                    class="floating-planet absolute -top-10 -right-5 w-16 opacity-50 z-10">
+
+                <img src="produk.png" alt="Showcase Neo SISKP"
+                    class="w-full h-auto max-w-lg object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)] transform transition hover:scale-105 duration-700">
+            </div>
+
+            <div class="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
+                <img src="logo.png" alt="Logo SISKP"
+                    class="hero-logo w-16 h-16 mb-6 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+
+                <h2
+                    class="hero-title text-4xl md:text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 uppercase tracking-tighter">
+                    KONTRIBUTOR NEO SISKP
+                </h2>
+                <p class="hero-subtitle text-gray-400 text-lg md:text-xl max-w-xl">
+                    Dokumentasi mahasiswa yang berkontribusi dalam pembuatan aplikasi neo siskp 2025, Jurusan Teknik
+                    Informatika, Universitas Negeri Gorontalo.
+                </p>
+            </div>
+
+        </div>
     </section>
 
     <section id="dosen" class="py-20 px-8 max-w-6xl mx-auto">
         <h3 class="section-title text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4">Dosen Pembimbing</h3>
         <div class="reveal-card glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 flex justify-center">
-                <img src="dosen.png" alt="Dosen Pembimbing"
+                <img src="all.png" alt="Dosen Pembimbing"
                     class="w-full h-auto max-h-[500px] object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)] transform transition hover:scale-105 duration-500">
             </div>
             <div class="w-full md:w-1/2">
@@ -65,8 +119,10 @@
                 <p class="text-blue-400 text-lg mb-6 font-medium">NIP. 199409052020121012</p>
                 <div class="h-1 w-20 bg-blue-500 mb-6"></div>
                 <p class="text-gray-300 leading-relaxed text-lg text-justify italic">
-                    "Bertanggung jawab dalam memberikan arahan akademis dan membimbing jalannya kegiatan seluruh divisi
-                    agar tetap selaras dengan kurikulum dan visi misi kelas."
+                    "Bertanggung jawab Memberikan arahan, masukan, dan evaluasi secara berkelanjutan dalam setiap
+                    tahapan pengembangan
+                    sistem, mulai dari perencanaan hingga implementasi, agar sistem yang dibangun berjalan sesuai
+                    tujuan, kebutuhan pengguna, serta standar yang telah ditetapkan."
                 </p>
             </div>
         </div>
@@ -136,8 +192,7 @@
                 </div>
                 <div class="p-6">
                     <span class="text-blue-500 font-mono text-sm">DIVISI 04</span>
-                    <h4 class="text-xl font-bold mb-2">Software Development
-                    </h4>
+                    <h4 class="text-xl font-bold mb-2">Software Development</h4>
                     <p class="text-gray-400 text-sm">
                         Divisi Software Development bertugas mengimplementasikan sistem NEOSIKP berdasarkan hasil
                         analisis dan desain yang telah dibuat. Divisi ini melakukan pengembangan fitur, integrasi
@@ -145,6 +200,36 @@
                         memastikan kualitas kode, keamanan sistem, dan kesiapan sistem untuk digunakan secara nyata.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-20 px-8 max-w-6xl mx-auto">
+        <h3 class="section-title text-3xl font-bold mb-12 border-l-4 border-green-500 pl-4">Kesan & Pesan Mahasiswa</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="reveal-card glass-card p-6 rounded-2xl">
+                <div class="text-4xl text-yellow-500 mb-2">"</div>
+                <p class="text-gray-300 italic mb-6 text-sm text-justify">"System Analysis melatih kami berpikir kritis
+                    dalam memetakan kebutuhan pengguna ke alur teknis yang nyata."</p>
+                <p class="font-bold text-sm">Analyst Team</p>
+            </div>
+            <div class="reveal-card glass-card p-6 rounded-2xl">
+                <div class="text-4xl text-blue-500 mb-2">"</div>
+                <p class="text-gray-300 italic mb-6 text-sm text-justify">"Implementasi kode di Neo SISKP memberi
+                    gambaran nyata tentang dunia kerja software engineering."</p>
+                <p class="font-bold text-sm">Dev Team</p>
+            </div>
+            <div class="reveal-card glass-card p-6 rounded-2xl">
+                <div class="text-4xl text-purple-500 mb-2">"</div>
+                <p class="text-gray-300 italic mb-6 text-sm text-justify">"Fokus kami adalah kenyamanan pengguna, setiap
+                    pixel di Neo SISKP dirancang dengan penuh pertimbangan."</p>
+                <p class="font-bold text-sm">Design Team</p>
+            </div>
+            <div class="reveal-card glass-card p-6 rounded-2xl">
+                <div class="text-4xl text-green-500 mb-2">"</div>
+                <p class="text-gray-300 italic mb-6 text-sm text-justify">"Integritas data adalah jantung dari sistem
+                    ini, mengelola database Neo SISKP adalah pengalaman berharga."</p>
+                <p class="font-bold text-sm">Data Team</p>
             </div>
         </div>
     </section>
@@ -157,12 +242,12 @@
         const canvas = document.getElementById('starCanvas');
         const ctx = canvas.getContext('2d');
         let stars = [];
+        let shootingStars = [];
 
         function resize() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
-
         window.addEventListener('resize', resize);
         resize();
 
@@ -188,32 +273,53 @@
             }
         }
 
+        class ShootingStar {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = 0;
+                this.length = Math.random() * 80 + 10;
+                this.speed = Math.random() * 10 + 5;
+                this.opacity = 1;
+            }
+            update() {
+                this.x -= this.speed;
+                this.y += this.speed;
+                this.opacity -= 0.01;
+                if (this.opacity <= 0 || this.x < 0 || this.y > canvas.height) this.reset();
+            }
+            draw() {
+                ctx.strokeStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(this.x + this.length, this.y - this.length);
+                ctx.stroke();
+            }
+        }
+
         function initStars() {
             stars = [];
             for (let i = 0; i < 150; i++) stars.push(new Star());
+            shootingStars = [];
+            for (let i = 0; i < 3; i++) shootingStars.push(new ShootingStar());
         }
 
         function animateStars() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             stars.forEach(star => { star.update(); star.draw(); });
+            shootingStars.forEach(sStar => { sStar.update(); sStar.draw(); });
             requestAnimationFrame(animateStars);
         }
 
         initStars();
         animateStars();
 
-        // --- LOGIC SCROLL REVEAL ---
-        // Penambahan reveal untuk logo
-        ScrollReveal().reveal('.hero-logo', { delay: 100, distance: '30px', origin: 'top' });
-        ScrollReveal().reveal('.hero-title', { delay: 200, distance: '50px', origin: 'top' });
-        ScrollReveal().reveal('.hero-subtitle', { delay: 400, distance: '50px', origin: 'bottom' });
+        ScrollReveal().reveal('.hero-logo', { delay: 300, distance: '30px', origin: 'top' });
+        ScrollReveal().reveal('.hero-title', { delay: 400, distance: '50px', origin: 'top' });
+        ScrollReveal().reveal('.hero-subtitle', { delay: 600, distance: '50px', origin: 'bottom' });
         ScrollReveal().reveal('.section-title', { delay: 200, distance: '30px', origin: 'left' });
-        ScrollReveal().reveal('.reveal-card', {
-            delay: 300,
-            distance: '60px',
-            origin: 'bottom',
-            interval: 200
-        });
+        ScrollReveal().reveal('.reveal-card', { delay: 300, distance: '60px', origin: 'bottom', interval: 200 });
     </script>
 </body>
 
