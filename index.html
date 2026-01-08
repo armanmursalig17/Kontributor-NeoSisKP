@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTI E</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        #starCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at bottom, #020617 0%, #000000 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans overflow-x-hidden">
+
+    <canvas id="starCanvas"></canvas>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center glass-card border-none bg-transparent">
+        <h1 class="text-2xl font-bold tracking-tighter text-blue-400">PTI E Akt 2023</h1>
+        <div class="space-x-8 hidden md:flex">
+            <a href="#dosen" class="hover:text-blue-400 transition">Dosen</a>
+            <a href="#divisi" class="hover:text-blue-400 transition">Divisi</a>
+        </div>
+    </nav>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <h2
+            class="hero-title text-4xl md:text-6xl font-black mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+            KONTRIBUTOR NEO SISKP
+        </h2>
+        <p class="hero-subtitle text-gray-400 text-lg md:text-xl max-w-2xl">
+            Dokumentasi mahasiswa yang berkontribusi dalam pembuatan apliaksi neo siskp 2025 , Jurusan Teknik
+            Informatika, Universitas Negeri Gorontalo.
+        </p>
+    </section>
+
+    <section id="dosen" class="py-20 px-8 max-w-6xl mx-auto">
+        <h3 class="section-title text-3xl font-bold mb-12 border-l-4 border-blue-500 pl-4">Dosen Pembimbing</h3>
+        <div class="reveal-card glass-card p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="dosen.png" alt="Dosen Pembimbing"
+                    class="w-full h-auto max-h-[500px] object-contain drop-shadow-[0_20px_50px_rgba(59,130,246,0.3)] transform transition hover:scale-105 duration-500">
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-blue-500 font-mono text-sm tracking-widest uppercase mb-2 block">Main Advisor</span>
+                <h4 class="text-3xl md:text-4xl font-bold mb-2">Ahmad Azhar Kadim, S.Kom., M.Kom. </h4>
+                <p class="text-blue-400 text-lg mb-6 font-medium">NIP. 199409052020121012</p>
+                <div class="h-1 w-20 bg-blue-500 mb-6"></div>
+                <p class="text-gray-300 leading-relaxed text-lg text-justify italic">
+                    "Bertanggung jawab dalam memberikan arahan akademis dan membimbing jalannya kegiatan seluruh divisi
+                    agar tetap selaras dengan kurikulum dan visi misi kelas."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="divisi" class="py-20 px-8 max-w-6xl mx-auto">
+        <h3 class="section-title text-3xl font-bold mb-12 border-l-4 border-purple-500 pl-4">Struktur Divisi</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="reveal-card glass-card overflow-hidden rounded-xl hover:bg-white/5 transition duration-300">
+                <div class="w-full bg-black/20 p-4">
+                    <img src="devisi1.png" alt="Divisi 1"
+                        class="w-full h-auto object-contain transition transform hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <span class="text-blue-500 font-mono text-sm">DIVISI 01</span>
+                    <h4 class="text-xl font-bold mb-2">System Analysis</h4>
+                    <p class="text-gray-400 text-sm">
+                        Divisi System Analysis bertanggung jawab dalam menganalisis kebutuhan sistem NEOSIKP secara menyeluruh. Divisi ini melakukan penggalian kebutuhan pengguna (mahasiswa, dosen, dan admin), menyusun dokumen kebutuhan sistem, serta merancang alur bisnis dan proses kerja sistem. Hasil analisis menjadi dasar utama bagi divisi lain dalam proses desain, pengembangan, dan implementasi sistem.
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal-card glass-card overflow-hidden rounded-xl hover:bg-white/5 transition duration-300">
+                <div class="w-full bg-black/20 p-4">
+                    <img src="devisi2.png" alt="Divisi 2"
+                        class="w-full h-auto object-contain transition transform hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <span class="text-blue-500 font-mono text-sm">DIVISI 02</span>
+                    <h4 class="text-xl font-bold mb-2">Database Management</h4>
+                    <p class="text-gray-400 text-sm">
+                        Divisi Database Management berfokus pada perancangan, pengelolaan, dan optimasi basis data NEOSIKP. Divisi ini merancang struktur database, relasi antar tabel, serta memastikan keamanan, konsistensi, dan integritas data skripsi dan kerja praktik. Selain itu, divisi ini juga mendukung kebutuhan query dan integrasi data untuk mendukung performa sistem secara optimal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal-card glass-card overflow-hidden rounded-xl hover:bg-white/5 transition duration-300">
+                <div class="w-full bg-black/20 p-4">
+                    <img src="devisi3.png" alt="Divisi 3"
+                        class="w-full h-auto object-contain transition transform hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <span class="text-blue-500 font-mono text-sm">DIVISI 03</span>
+                    <h4 class="text-xl font-bold mb-2">UI/UX Design</h4>
+                    <p class="text-gray-400 text-sm">
+                        Divisi UI/UX Design bertanggung jawab dalam merancang tampilan dan pengalaman pengguna NEOSIKP agar mudah digunakan, intuitif, dan efisien. Divisi ini menyusun user flow, wireframe, hingga desain antarmuka menggunakan Figma, dengan mempertimbangkan kebutuhan pengguna dan hasil analisis sistem. Tujuan utama divisi ini adalah menciptakan pengalaman pengguna yang nyaman dan profesional.
+                    </p>
+                </div>
+            </div>
+
+            <div class="reveal-card glass-card overflow-hidden rounded-xl hover:bg-white/5 transition duration-300">
+                <div class="w-full bg-black/20 p-4">
+                    <img src="devisi4.png" alt="Divisi 4"
+                        class="w-full h-auto object-contain transition transform hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <span class="text-blue-500 font-mono text-sm">DIVISI 04</span>
+                    <h4 class="text-xl font-bold mb-2">Software Development
+                    </h4>
+                    <p class="text-gray-400 text-sm">
+                        Divisi Software Development bertugas mengimplementasikan sistem NEOSIKP berdasarkan hasil analisis dan desain yang telah dibuat. Divisi ini melakukan pengembangan fitur, integrasi sistem, serta pengujian aplikasi agar berjalan sesuai kebutuhan. Selain itu, divisi ini juga memastikan kualitas kode, keamanan sistem, dan kesiapan sistem untuk digunakan secara nyata.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 border-t border-white/5">
+        <p>&copy; 2024 Kelas Pemrograman. Built with Tailwind & Heart.</p>
+    </footer>
+
+    <script>
+
+        const canvas = document.getElementById('starCanvas');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Star {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2;
+                this.speed = Math.random() * 0.5;
+            }
+            update() {
+                this.y += this.speed;
+                if (this.y > canvas.height) {
+                    this.y = 0;
+                    this.x = Math.random() * canvas.width;
+                }
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initStars() {
+            stars = [];
+            for (let i = 0; i < 150; i++) stars.push(new Star());
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => { star.update(); star.draw(); });
+            requestAnimationFrame(animateStars);
+        }
+
+        initStars();
+        animateStars();
+
+        // --- LOGIC SCROLL REVEAL ---
+        ScrollReveal().reveal('.hero-title', { delay: 200, distance: '50px', origin: 'top' });
+        ScrollReveal().reveal('.hero-subtitle', { delay: 400, distance: '50px', origin: 'bottom' });
+        ScrollReveal().reveal('.section-title', { delay: 200, distance: '30px', origin: 'left' });
+        ScrollReveal().reveal('.reveal-card', {
+            delay: 300,
+            distance: '60px',
+            origin: 'bottom',
+            interval: 200
+        });
+    </script>
+</body>
+
+</html>
